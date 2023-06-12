@@ -357,3 +357,64 @@ const printGreeting = (name) => {
     return `Hello there, ${name}`
 }
 console.log(printGreeting("Slimer"));
+
+// B. printCool
+// Write a function printCool that accepts one parameter, name as an argument. The function should print the name and a message saying that that person is cool.
+
+const printCool = (name) => {
+    return `${name} is cool!`
+}
+console.log(printCool("Captain Reynolds"));
+
+// C. calculateCube
+// Write a function calculateCube that takes a single number and prints the volume of a cube made from that number.
+const calculateCube = (num) => {
+    let i = Math.pow(num, 3);
+    return i;
+}
+console.log(calculateCube(5));
+
+// D. isVowel
+// Write a function isVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
+// The vowel could be upper or lower case.
+// Test your function on every vowel and make sure it's working.
+// In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want.
+
+const isVowel = (letter) => {
+
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+    vowels.forEach((char) => {
+            if(char === letter.toLowerCase()){      // to lowercase makes input lowercase
+                    console.log(`${letter} is a vowel`)
+            } 
+})}
+isVowel("a");
+isVowel("E");
+
+// E. getTwoLengths
+// Write a function getTwoLengthsthat accepts two parameters (strings).
+// // The function should return an array of numbers where each number is the length of the corresponding string.
+
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+
+// F. getMultipleLengths
+// Write a function getMultipleLengthsthat accepts a single parameter as an argument: an array of strings.
+// The function should return an array of numbers where each number is the length of the corresponding string.
+
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
+// G. maxOfThree
+// Define a function maxOfThreethat takes three numbers as arguments and returns the largest of them.
+// If all numbers are the same, it doesn't matter which one is returned.
+// If the two largest numbers are the same, one of them should be returned.
+// Be sure to test it with larger values in each of the three locations.
+// does not use Math.max()
+
+console.log(maxOfThree(6, 9, 1));
+
+// H. printLongestWord
+// Write a function printLongestWordthat accepts a single argument, an array of strings.
+// The method should return the longest word in the array.
+// In case of a tie, the method should return the word that appears first in the array.
+
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
