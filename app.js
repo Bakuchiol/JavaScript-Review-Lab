@@ -91,3 +91,89 @@ if(animal === "cow"){
 }
 // Commit
 
+
+// E. Driver's Ed
+// Make a variable that holds a person's age; be semantic
+// Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
+
+
+let age = 57;
+if(age >= 16){
+    console.log("Here are the keys!")
+} else {
+    console.log("Sorry, you're too young.")
+}
+
+// ----- LOOPS
+
+// A. The basics
+// Write a loop that will print out all the numbers from 0 to 10, inclusive
+
+for(let i = 0; i <= 10; i++){
+    console.log(i)
+}
+// Write a loop that will print out all the numbers from 10 up to and including 400
+for(let i = 10; i <= 400; i++){
+    console.log(i)
+}
+// Write a loop that will print out every third number starting with 12 and going no higher than 4000
+for( let i= 12; i <= 4000; i+=3 ){
+    console.log(i)
+}
+
+// B. Get even
+// Print out the numbers that are within the range of 1 - 100
+for(let i = 1; i < 100; i++){
+    console.log(i)
+}
+// Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+for(let i = 1; i < 100; i++){
+    if(i % 2 === 0){
+        console.log(`${i} <-- is an even number`)
+    } else {
+        console.log(i)
+    }
+}
+// shortcut
+for(let i = 1; i < 100; i++){
+    i % 2 ? console.log(i) : console.log(`${i} <-- is an even number`)
+}
+
+
+// C. Give me Five
+// For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
+for(let i = 0; i <=100; i++){
+    if(i % 5 === 0){
+        console.log("I found a number. High five!")
+    } else {
+        console.log(i)
+    }
+}
+//shortcut
+for(let i = 0; i <=100; i++){
+    i % 5 ? console.log(i) : console.log("I found a number. High five!")
+}
+//shortcut
+for(let i = 0; i <=100; i++){
+    i % 5 === 0 ? console.log("I found a number. High five!") : console.log(i)
+}
+
+// 1. Add to the code from above to print out "I found a number. Three is a crowd" if the number is a multiple of three
+for (let i = 1; i <= 100; i++){
+    if (1 % 3 === 0){
+        console.log("I found a number. Three is a crowd")
+    }
+}
+// 2. For numbers divisible by both three and five, be sure your code prints both messages
+for (let i = 1; i <= 100; i++){
+    // if ((i % 3 == 0) && (i % 5 ==0))
+    if (1 % 15 == 0) {
+    console.log("Fizz Buzz")
+    } else if (i % 3 == 0) {
+        console.log("Fizz");
+    } else if (i % 5 == 0){
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
