@@ -452,13 +452,20 @@
 //     return theWord;
 // }
 // console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
-
+/* ----------------------------------------------------------------------- */
 // Objects
 // A. Make a user object
 // Create an object called user.
 // Write in to the object the key-value pairs for name, email, age, and purchased.
 // Set the value of purchasedto an empty array [].
 // Set the other values to whatever you would like.
+
+let user = {
+    name: "Lupin",
+    email: "loopin@looopin.com",
+    age: 5,
+    purchased: []
+}
 
 
 // B. Update the user
@@ -467,7 +474,8 @@
 // Our user has had a birthday! Without changing the original userobject,
 // increment the agevalue using the postfix operator. Hint: age++
 
-
+user.email = "loopsy@looopin.com"
+user.age++
 
 
 // C. Adding keys and values
@@ -476,6 +484,7 @@
 // Without changing the original userobject, add a new key locationto the object,
 // and give it a value or some-or-other location (a string).
 
+user.location = "Bahamas"
 
 // D. Shopaholic!
 // Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchasedarray.
@@ -483,4 +492,61 @@
 // Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchasedarray.
 // Console.log just the "Merino jodhpurs" from the purchasedarray.
 
+user['purchased'].push("carbohydrates", "peace of mind", "Merino jodhpurs")
+// console.log(user.purchased[2]) // Merino jodphurs (fancy riding pants)
 
+
+// E. Object-within-object
+
+// example
+// user.friend = {
+//     name: "Grace Hopper",
+//     age: 85
+// }
+
+// Write a friendobject into your userobject and give the friend a name, age, location, and purchased array (empty for now)
+// Console.log just the friend's name
+// Console.log just the friend's location
+// CHANGE the friend's age to 55
+// The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchasedarray.
+// The friendhas purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
+// Console.log just "A latte" from the friend's purchasedarray.
+
+user.friend = {
+    name: "Jake the Dog",
+    age: 34,
+    location: "Tree House",
+    purchased: []
+}
+console.log(user.friend.name)
+console.log(user.friend.location)
+
+user.friend.age = 55
+console.log(user.friend.age)
+
+user.friend['purchased'].push("The One Ring", "A latte")
+console.log(user.friend.purchased[1])
+
+// F. Loops
+// Write a for loop that iterates over the User's purchasedarray (NOT the friend's purchased array),
+// and prints each element to the console.
+// Write a for loop that iterates over the Friend's purchasedarray, and prints each element to the console.
+
+for(let i = 0; i < user.purchased.length; i++){
+    console.log(user.purchased[i])
+}
+
+for(let i = 0; i < user.friend.purchased.length; i++){
+    console.log(user.friend.purchased[i])
+}
+/*----------------------------------------------------------*/
+// G. Functions can operate on objects
+// Write a single function updateUserthat takes no parameters. When the function is run, it should:
+// it should increment the user's age by 1
+// make the user's name uppercase
+// The function does not need a returnstatement, it will merely modify the user object.
+
+// Write a function oldAndLoudthat performs the exact same tasks as updateUser,
+// but instead of hard-coding it to only work on our userobject, make it take a parameter person,
+// and have it modify the object that is passed in as an argument when the function is called.
+// Call your oldAndLoudfunction with useras the argument.
