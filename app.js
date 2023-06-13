@@ -567,3 +567,68 @@ oldAndLoud(user);
 console.log(user);
 
 /* -----------------------Cat Combinator----------------------------- */
+// 1. Mama cat
+// Define an object called cat1that contains the following properties:
+
+// name
+// breed
+// age (a number)
+// console.log the cat's age
+// console.log the cat's breed
+
+let cat1 = {
+    name: "Ashley",
+    breed: "British Shorthair",
+    age: 6,
+}
+console.log(cat1.age)
+console.log(cat1.breed)
+
+// 2. Papa cat
+// Define an object called cat2that also contains the properties:
+
+// name
+// breed
+// age (a number)
+
+let cat2 = {
+    name: "Asher",
+    breed: "Maine Coon",
+    age: 8
+}
+
+// 3. Combine Cats!
+// Write a function combineCatsthat has two parameters mama, and papa.
+// The function will take two arguments -- each a cat object.
+// Pass cat1and cat2as arguments to the combineCatsfunction. The function should console.log them.
+// Make it so the combineCatsfunction will return a combination of the two incoming cats
+// The result should be an object wherein the
+// name is a concatenation of the parents' names
+// the age is 1
+// the breed is each of the parents' breeds with a hyphen in between
+
+const combineCats = (mama, papa) => {
+    console.log(`The mama and papa are ${mama.name} and ${papa.name}.`);
+    let newName = mama.name + papa.name;
+    let hybrid = `${mama.breed}-${papa.breed}`;
+
+    let newCat = {
+        name: newName,
+        breed: hybrid,
+        age: 1
+    }
+
+    return newCat;
+}
+
+console.log(combineCats(cat1,cat2))
+
+// 4. Cat brain bender
+
+/*  cat1    cat2  ||  cat3    cat4
+        \  /              \  /
+       child1     +      child2
+            \           /
+                babi
+*/
+console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
