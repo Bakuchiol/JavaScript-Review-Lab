@@ -384,7 +384,7 @@ const isVowel = (letter) => {
 
     vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
     vowels.forEach((char) => {
-            if(char === letter.toLowerCase()){      // to lowercase makes input lowercase
+            if(char === letter.toLowerCase()){
                     console.log(`${letter} is a vowel`)
             } 
 })}
@@ -395,11 +395,21 @@ isVowel("E");
 // Write a function getTwoLengthsthat accepts two parameters (strings).
 // // The function should return an array of numbers where each number is the length of the corresponding string.
 
+const getTwoLengths = (...args) => {
+    return args.map(text => text.length)
+}
 console.log(getTwoLengths("Hank", "Hippopopalous"));
 
 // F. getMultipleLengths
 // Write a function getMultipleLengthsthat accepts a single parameter as an argument: an array of strings.
 // The function should return an array of numbers where each number is the length of the corresponding string.
+
+const getMultipleLengths = (arr) => {
+    return arr.map(function(text){
+        return text.length;
+    });
+}
+
 
 console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 
@@ -410,11 +420,11 @@ console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 // Be sure to test it with larger values in each of the three locations.
 // does not use Math.max()
 
-console.log(maxOfThree(6, 9, 1));
+// console.log(maxOfThree(6, 9, 1));
 
 // H. printLongestWord
 // Write a function printLongestWordthat accepts a single argument, an array of strings.
 // The method should return the longest word in the array.
 // In case of a tie, the method should return the word that appears first in the array.
 
-console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
