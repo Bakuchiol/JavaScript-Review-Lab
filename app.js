@@ -353,26 +353,26 @@
 // IV. Functions
 // A. printGreeting
 // Do you think you could write a function called printGreetingwith a parameter namethat returns a greeting with the argument interpolated into the greeting?
-const printGreeting = (name) => {
-    return `Hello there, ${name}`
-}
-console.log(printGreeting("Slimer"));
+// const printGreeting = (name) => {
+//     return `Hello there, ${name}`
+// }
+// console.log(printGreeting("Slimer"));
 
 // B. printCool
 // Write a function printCool that accepts one parameter, name as an argument. The function should print the name and a message saying that that person is cool.
 
-const printCool = (name) => {
-    return `${name} is cool!`
-}
-console.log(printCool("Captain Reynolds"));
+// const printCool = (name) => {
+//     return `${name} is cool!`
+// }
+// console.log(printCool("Captain Reynolds"));
 
 // C. calculateCube
 // Write a function calculateCube that takes a single number and prints the volume of a cube made from that number.
-const calculateCube = (num) => {
-    let i = Math.pow(num, 3);
-    return i;
-}
-console.log(calculateCube(5));
+// const calculateCube = (num) => {
+//     let i = Math.pow(num, 3);
+//     return i;
+// }
+// console.log(calculateCube(5));
 
 // D. isVowel
 // Write a function isVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
@@ -380,38 +380,40 @@ console.log(calculateCube(5));
 // Test your function on every vowel and make sure it's working.
 // In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want.
 
-const isVowel = (letter) => {
-
-    vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
-    vowels.forEach((char) => {
-            if(char === letter.toLowerCase()){
-                    console.log(`${letter} is a vowel`)
-            } 
-})}
-isVowel("a");
-isVowel("E");
+// const isVowel = (letter) => {
+//     let state = false;
+//     vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+//     for(let i = 0; i < vowels.length; i++) {
+//         if(letter.toLowerCase() == vowels[i]) {
+//             state = true;
+//         }
+//     }
+//     return state;
+// }
+// console.log(isVowel("B"));
+// console.log(isVowel("O"));
 
 // E. getTwoLengths
-// Write a function getTwoLengthsthat accepts two parameters (strings).
+// Write a function getTwoLengths that accepts two parameters (strings).
 // // The function should return an array of numbers where each number is the length of the corresponding string.
 
-const getTwoLengths = (...args) => {
-    return args.map(text => text.length)
-}
-console.log(getTwoLengths("Hank", "Hippopopalous"));
+// const getTwoLengths = (...args) => {
+//     return args.map(text => text.length)
+// }
+// console.log(getTwoLengths("Hank", "Hippopopalous"));
 
 // F. getMultipleLengths
 // Write a function getMultipleLengthsthat accepts a single parameter as an argument: an array of strings.
 // The function should return an array of numbers where each number is the length of the corresponding string.
 
-const getMultipleLengths = (arr) => {
-    return arr.map(function(text){
-        return text.length;
-    });
-}
+// const getMultipleLengths = (arr) => {
+//     return arr.map(function(text){
+//         return text.length;
+//     });
+// }
 
 
-console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+// console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 
 // G. maxOfThree
 // Define a function maxOfThreethat takes three numbers as arguments and returns the largest of them.
@@ -420,35 +422,36 @@ console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 // Be sure to test it with larger values in each of the three locations.
 // does not use Math.max()
 
-const maxOfThree = (a, b, c) => {
-    if (a > b && a > c){
-        return a;
-    } else if (b > a && b > c){
-        return b;
-    } else if (c > a && c > b){
-        return c;
-    }
-}
+// const maxOfThree = (a, b, c) => {
+//     if (a > b && a > c){
+//         return a;
+//     } else if (b > a && b > c){
+//         return b;
+//     } else if (c > a && c > b){
+//         return c;
+//     }
+// }
 
-console.log(maxOfThree(6, 9, 1));
+// console.log(maxOfThree(6, 9, 1));
 
 // H. printLongestWord
 // Write a function printLongestWordthat accepts a single argument, an array of strings.
 // The method should return the longest word in the array.
 // In case of a tie, the method should return the word that appears first in the array.
 
-const printLongestWord = function(word) {
-    let wordSplit = word.split(' ');
-    let longWord = 0;
+// const printLongestWord = function(words) {
+//     let longWord = 0;
+//     let theWord = '';
 
-    for(let i = 0; i < wordSplit.length; i++){
-        if(wordSplit[i].length > longWord){
-            longWord = wordSplit[i].length;
-        }
-    }
-    return longWord;
-}
-console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+//     words.forEach((word) => {
+//         if (word.length > longWord) {
+//             longWord = word.length;
+//             theWord = word;
+//         }
+//     });
+//     return theWord;
+// }
+// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 
 // Objects
 // A. Make a user object
@@ -456,3 +459,28 @@ console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanut
 // Write in to the object the key-value pairs for name, email, age, and purchased.
 // Set the value of purchasedto an empty array [].
 // Set the other values to whatever you would like.
+
+
+// B. Update the user
+// Our user has changed his or her email address.
+// Without changing the original userobject, update the emailvalue to a new email address.
+// Our user has had a birthday! Without changing the original userobject,
+// increment the agevalue using the postfix operator. Hint: age++
+
+
+
+
+// C. Adding keys and values
+// You have decided to add your user's location to the data that you want to collect.
+
+// Without changing the original userobject, add a new key locationto the object,
+// and give it a value or some-or-other location (a string).
+
+
+// D. Shopaholic!
+// Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchasedarray.
+// Our user has purchased an item! They have purchased some "peace of mind". Using .push(), add the string "peace of mind" to the purchasedarray.
+// Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchasedarray.
+// Console.log just the "Merino jodhpurs" from the purchasedarray.
+
+
