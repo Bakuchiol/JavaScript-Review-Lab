@@ -632,3 +632,16 @@ console.log(combineCats(cat1,cat2))
                 babi
 */
 console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
+
+// Write a console.log that is three levels deep of combineCats. combineCats should have two arguments,
+// each which are combineCats, each which have two arguments, each which are combineCats.
+
+console.log(combineCats(
+    combineCats(
+        combineCats(cat1, cat2), combineCats(cat1, cat2)
+    ),
+    combineCats(
+        combineCats(cat1, cat2), combineCats(cat1, cat2)
+    )
+    )
+);
