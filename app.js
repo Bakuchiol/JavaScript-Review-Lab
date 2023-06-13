@@ -420,11 +420,39 @@ console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 // Be sure to test it with larger values in each of the three locations.
 // does not use Math.max()
 
-// console.log(maxOfThree(6, 9, 1));
+const maxOfThree = (a, b, c) => {
+    if (a > b && a > c){
+        return a;
+    } else if (b > a && b > c){
+        return b;
+    } else if (c > a && c > b){
+        return c;
+    }
+}
+
+console.log(maxOfThree(6, 9, 1));
 
 // H. printLongestWord
 // Write a function printLongestWordthat accepts a single argument, an array of strings.
 // The method should return the longest word in the array.
 // In case of a tie, the method should return the word that appears first in the array.
 
-// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+const printLongestWord = function(word) {
+    let wordSplit = word.split(' ');
+    let longWord = 0;
+
+    for(let i = 0; i < wordSplit.length; i++){
+        if(wordSplit[i].length > longWord){
+            longWord = wordSplit[i].length;
+        }
+    }
+    return longWord;
+}
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+
+// Objects
+// A. Make a user object
+// Create an object called user.
+// Write in to the object the key-value pairs for name, email, age, and purchased.
+// Set the value of purchasedto an empty array [].
+// Set the other values to whatever you would like.
