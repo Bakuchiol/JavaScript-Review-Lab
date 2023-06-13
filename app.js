@@ -546,7 +546,24 @@ for(let i = 0; i < user.friend.purchased.length; i++){
 // make the user's name uppercase
 // The function does not need a returnstatement, it will merely modify the user object.
 
+// const updateUser = () => {
+//     user.age++;
+//     user.name.toUpperCase();
+// }
+
+
 // Write a function oldAndLoudthat performs the exact same tasks as updateUser,
 // but instead of hard-coding it to only work on our userobject, make it take a parameter person,
 // and have it modify the object that is passed in as an argument when the function is called.
 // Call your oldAndLoudfunction with useras the argument.
+
+const oldAndLoud = (person) => {
+    person.age++;
+    person.name.toUpperCase();
+
+}
+
+oldAndLoud(user);
+console.log(user);
+
+/* -----------------------Cat Combinator----------------------------- */
